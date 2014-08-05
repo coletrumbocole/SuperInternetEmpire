@@ -1,0 +1,27 @@
+
+
+Taby,
+
+So I told you about some things I need you to do for the website, but I added a few more. I'm sorry this is taking so much of your time and energy.
+I thought I would be able to do all this for you. 
+It turns out, I'm in way over my head with just puting something up that will work and look amazing.
+All of these things will help your SEO. You'll get better rankings in Google Search and more interaction from visitors 
+if we can nail down what they want and get the right elements on the page.
+The cool thing is, we're working on a site for Hruska's Kolaches in our class, which will teach me a lot of the things I'll need to build your site.
+
+1 Sign up for Bluehost.	
+2 choose payment method for shopping on your site. For now I plan on using shopsite because Bluehost lets you use it free.
+	But do you want customers to check out using PayPal? braintree? Stripe? Something else? 
+	Some are designed for people using your site on their phone - braintree and stripe. Some may not be. 
+	I was trying to figure that out, but it was taking too long. 
+3 Get photos together that you want on the site
+4 write whatever is interesting and useful about Taby Bags: story, location, team, why buy, shoppers' experiences, events, store news, fashion news, etc. 
+	We need 300 words on the home page, and 300 words on any other page.
+5 Tell me about your market. 
+	What were the last 30 customers like, or most customers like? Age? Income level? Interests? Where do they live? etc. 
+	What do they like about your store? 
+	What don't they like? 
+	Why do they shop there? Location? Price? Lifestyle/tradition? Customer Service? Specialty items? ect.
+	What kind of look and feel do they expect in the store? Which of those elements need to be in the webpage?	
+6 make a list of keywords that you think people will use to search for Taby Bags.
+	
