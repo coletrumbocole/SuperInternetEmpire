@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#a{	
+		background-color: orange;
+		height: 100px;
+		width: 100px;
+		}
+
+	</style>
+</head>
+<body>
+	<p>aaaaaaa</p>
+	<button id="b">
+		Grow Back
+	</button>
+	<div id="a">
+		<h1>Shrinking Div</h1>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	var h = 100;
+			$('#a').click(function(){
+				h = h - 25;
+				$(this).css('width', h + "px").css('height', h + "px");
+			});
+			$('#b').click(function(){
+				h = h + 25;
+				$('#a').css('width', h + "px").css('height', h + "px");
+			});
+
+			$( "p" ).click(function() {
+				$( this ).slideUp();
+			});
+	</script>
+</body>
+</html>

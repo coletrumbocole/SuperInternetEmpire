@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	table{
+		width: 600px;
+		height: 600px;
+	}
+	</style>
+</head>
+<body ng-app="app">
+	<div ng-controller="a">
+		<table>
+			<tr>
+				<th>
+					Name
+				</th>
+			</tr>
+			<tr ng-repeat="person in people">
+				<td>
+					{{person.name}}
+				</td>
+				<td>
+					{{person.hobby}}
+				</td>
+			</tr>
+		</table>
+	</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+<script type="text/javascript">
+	var app= angular.module("app",[]);
+	app.controller("a", ["$scope", function($scope){
+		$scope.people = [
+		{name: "scott",
+		hobby: "unicycle"
+		}
+		,{name: "annie",
+		hobby: "web dev"
+		}
+		,{name: "cole",
+		hobby: "typing"
+		} 
+		,{name: "amber",
+		hobby: "play piano"
+		}
+		,{name: "christina",
+		hobby: "olympics"
+		}
+		,{name: "wes",
+		hobby: "crashing"
+		}
+		,{name: "the",
+		hobby: "end"			
+		}
+	];
+	}]);
+</script>
+</body>
+</html>

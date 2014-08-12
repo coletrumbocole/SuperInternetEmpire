@@ -1,0 +1,78 @@
+html{
+	display: inline;
+}
+body{
+	font-family: verdana, sans-serif;
+}
+.ThanksPWA{
+	background-image: url('../assets/PWAlogo_green.jpg');
+	background-size: 50% 50%;
+}
+body {
+	background-color: #AAFFD7;
+	padding: 0px;
+	margin: 0px;
+}
+.remoteNumber{
+	background-color: green;
+	height: 20px;
+	width: 20px;
+	float: left;
+}
+.blue {
+	background-color: blue;
+}
+.orange{
+	background-color: orange;
+}
+.green{
+	background-color: green;
+}
+.yellow{
+	background-color: yellow;
+}
+.signUp{
+	background-image: url('../assets/signup.png');
+	background-size: 100% 100%;
+	height: 30px;
+}
+.sizeButton{
+	width: 50px;
+	height: 50px;
+}
+.form {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.topOfPage{
+	background-image: url('../assets/mural.jpg');
+	height: 300px;
+	margin:none;
+}
+.remote{
+	background-color: rgb(84, 91, 99);
+	height: 300px;
+}
+.tv{
+	background-color: gray;
+	height: 300px;
+}
+
+
+
+
+	/* stacking classes = only what's .bluetext and inside of a .maincontent gets this formatting*/
+	.maincontent .bluetext{
+		font-size: 10em;
+	}
+	/*<!-- have same properties? */
+	.maincontent, .bluetext{
+		text-transform: uppercase;
+
+	}
+	/*write like this camelCaseThatIsNotHardToRead. Don't write a class like this camel case that is not hard to read. Separating with a space makes another class. -->*/
+/*AAFFD7 light green
+120CE8 blue, 18,12,232
+FF0000 red, 255,0,0
+E8AF0C orange 232,175,12
+#ffa500 provo orange, 
+43FF49 green, 67,255,73*/

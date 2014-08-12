@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body ng-app="PracticeApp">
+	<!-- <h1>
+		Learn {{language}} Today!
+	</h1>
+	<div ng-controller="spanish">
+		<input ng-model="phrase"/>
+		Hello: {{greeting}}<br>
+		{{phrase}}
+		<button ng-click="showYourself()">Secret Revelator</button>
+	</div>
+	<h1>
+		Learn {{language}} Today!
+	</h1>
+	<div ng-controller="french">
+		<input ng-model="phrase"/>
+		Hello: {{greeting}}<br>
+		
+		<button ng-click="showYourself()">Secret Revelator</button>
+	</div> -->
+	<div ng-controller="username">
+		<h1>
+			Create a username
+		</h1>
+		<input ng-model="create" type="text">
+		<button ng-click="popup()">Create</button>
+	</div>
+	<div ng-controller="password">
+		<h1>
+			Create a password
+		</h1>
+		<input ng-model="create" type="text">
+		<button ng-click="popup()">Create</button>		
+	</div>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+<script type="text/javascript">
+	var app = angular.module("PracticeApp",[]);
+	// app.controller("spanish", ["$scope", function($scope){
+	// 	$scope.greeting = "Hola!";
+	// 	$scope.phrase="write a secret message";
+	// 	$scope.language="Spanish";
+	// 	$scope.showYourself=function(){
+	// 		alert($scope.phrase);
+	// 	}
+
+	// 	}]);
+	// app.controller("french", ["$scope", function($scope){
+	// 		$scope.greeting="Bonjour!";
+	// 		$scope.language="French";
+	// 	$scope.showYourself=function(){
+	// 		alert($scope.phrase);
+	// 	}
+	// 	}]);
+	app.controller("username", ["$scope", function($scope){
+		$scope.popup=function(){
+			alert("this is your username: "+ $scope.create);
+		}
+	}]);
+	app.controller("username", ["$scope", function($scope){
+		$scope.popup=function(){
+			alert("this is your password: "+ $scope.create);
+		}
+	}]);	
+
+</script>
+</body>
+</html>

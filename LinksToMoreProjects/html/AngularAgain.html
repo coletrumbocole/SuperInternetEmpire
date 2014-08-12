@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AngularAgain</title>
+	<style type="text/css">
+	.ng-cloak{
+		display: none;
+	}
+	.box{
+		background-color: blue;
+		width: 500px;
+		height: 500px;
+	}
+	</style>
+</head>
+
+<body ng-app="myapp" ng-cloak class="ng-cloak">
+	<div ng-controller="orbit">
+		{{button1}}<br>
+		{{button2}}
+
+	</div>
+		<div ng-controller="mycontroller">
+			<div
+			ng-mouseover="add()"
+			ng-mouseout="minus()"
+		>
+			Likes: {{myword}}
+		</div>
+	</div>
+
+	<div ng-controller="mycontroller" class="box" ng-show="isHidden">
+		Here are some wwwwwwwords
+	</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js">
+</script>
+<script type="text/javascript">
+	var app=angular.module ("myapp",[]);
+	app.controller("orbit",["$scope", function($scope){
+		$scope.button1 = "demo games";
+		$scope.button2 = "about";
+	}]);
+
+	app.controller('mycontroller', ['$scope', function($scope) {
+	$scope.myword = 0;
+	$scope.isHidden = true;
+
+	$scope.add = function(){
+		$scope.myword++;
+		$scope.isHidden = false;
+	}
+	$scope.minus=function(){
+		$scope.myword--;
+		$scope.isHidden = true;
+	}
+	}]);
+</script>
+</body>
+</html>
