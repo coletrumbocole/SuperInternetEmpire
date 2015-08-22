@@ -21,7 +21,7 @@
 				Hi everyone, please kill the moles.
 			</h3>
 			<p>
-				SCORE:	{{gc.score}}, currSquare: {{gc.currSquare["display"]}}, squareA MoleIsUp: {{gc.squareA["MoleIsUp"]}}
+				SCORE:	{{gc.gameData.score}}, Player Pos : {{gc.gameData.Player["pos"]}}, Mole pos: {{gc.gameData.Mole["pos"]}} TIME REMAINING {{gc.gameData.timer["remaining"]}}
 			</p>
 		</div>
 		
@@ -30,14 +30,15 @@
 			</div>
 		</div> the mouse will be the hammer for now -->
 		
-		<button ng-click='gc.moleStart()'>Play</button>
+		<button ng-click="gc.startGame(gc.gameData)">Play</button>
 	
 		<div  id="board" class="row">
 			<div class = "col-xs-6 col-xs-offset-3">
-				<div  id="A" class="square col-xs-6" ng-mouseover="gc.update(gc.squareA)" ng-click='gc.hit(gc.currSquare)'>
+				<div  id="A" class="square col-xs-6" ng-mouseover="gc.update(1)" ng-click='gc.hit(gc.gameData)'>
 					
 				</div>
-				<div  id="B" class="square col-xs-6" ng-mouseover="gc.update(gc.squareB)" ng-click='gc.hit(gc.currSquare)'>
+				<div  id="B" class="square col-xs-6" ng-mouseover="gc.update(2)" ng-click='gc.hit(gc.gameData)'>
+					
 					
 				</div>
 			</div>
@@ -45,6 +46,6 @@
 	</div>
 	
 	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js'></script>
-	<script type="text/javascript" src='moles.js'></script>
+	<script type="text/javascript" src='mole.js'></script>
 </body>
 </html>
