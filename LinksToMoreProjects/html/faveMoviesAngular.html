@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body ng-app="app">
+	<ul ng-controller="list">
+		<h1>
+			{{listName}}
+		</h1>
+		<li ng-repeat="data in movie">
+			
+				{{data.name}}: 
+			{{data.movie1}}
+				
+		</li>
+	</ul>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+<script type="text/javascript">
+	var app = angular.module("app",[]);
+	app.controller("list", ["$scope",function($scope){
+		$scope.listName = "Favorite Movies";
+		$scope.movie = 
+	[
+	{
+		name: "Malcolm",
+			movie1: "Hot Rod",
+		
+	}
+	,{
+		name: "Cole",
+			movie1: "Hot Rod",
+			
+	},
+	{
+	name: "Maggie",
+			movie1: "Nacho Libre",
+		
+	}
+	]
+		
+	}]);
+</script>
+</body>
+</html>
+<!-- $scope.movie = [
+
+	{name: "Malcolm",
+			movie1: "Hot Rod",
+			moveie2: "Lego Movie",
+			movie3:"Wreck It Ralph",
+			movie4:"Peabody and Sherman",
+			movie5: "Nacho Libre",
+			movie6:"fantastic mr. fox",
+			movie7:"Chitty chitty bang bang",
+			movie8:"ET"
+	},
+	{
+		name: "Cole",
+			movie1: "Hot Rod",
+			moveie2: "Lego Movie",
+			movie3:"Wreck It Ralph",
+			movie5: "Nacho Libre",
+			movie6:"fantastic mr. fox",
+	},
+	{
+	name: "Maggie",
+			movie1: "Nacho Libre",
+			movie2: "ET",
+			movie3: "Hot Rod",
+			movie4:"Peabody and Sherman",
+			movie5:"Wreck It Ralph",
+			movie6:"Lego Movie",
+			movie7:"where the wild things are",
+			movie8:"fantastic mr. fox",
+			movie9:"Ernest",
+			movie10:"Chitty chitty bang bang"
+	} -->

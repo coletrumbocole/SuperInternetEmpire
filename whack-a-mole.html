@@ -1,0 +1,96 @@
+<html>
+<head>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	
+	<style>
+	.square{
+		height: 100px;
+		width: 100px;
+		margin: auto;
+	}
+	#A{
+		background-color: blue;
+	}
+	</style>
+</head>
+<body ng-app="game" ng-controller="gameController as gc">
+	<div class="container">
+		<div class="row">
+			<h3> 
+				Hi everyone, please kill the moles.
+			</h3>
+			<p>
+				SCORE:	{{gc.score}}, currSquare: {{gc.currSquare["display"]}}
+			</p>
+		</div>
+		
+		<!-- <div id="hammer">
+			<div id="ng-style">
+			</div>
+		</div> the mouse will be the hammer for now -->
+		
+		<button ng-click='gc.moleStart()'>Play</button>
+	
+		<div  id="board" class="row">
+			<div class = "col-xs-6 col-xs-offset-3">
+				<div  id="A" class="square col-xs-6" ng-mouseover="gc.update(gc.squareA)" ng-click='gc.hit(gc.currSquare)'>
+					
+				</div>
+				<div  id="B" class="square col-xs-6" ng-mouseover="gc.update(gc.squareB)" ng-click='gc.hit(gc.currSquare)'>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js'></script>
+	
+	<script >
+		
+		angular.module('game', [])
+		.controller('gameController', ['$scope', '$interval', 
+		    function($scope, $interval){
+		
+			this.score= 0;
+			//each square needs to have a unique id, and when it is moused-over, the currSquare is updated to that id, and isMole is updated to whter the square is Mole or not.
+			
+			this.squareA = {
+				isMole: 1,
+				display: "You're on A"
+			};
+			
+			this.squareB = {
+				isMole: 0,
+				display: "You're on B"
+			};			
+			
+			this.moleChange = function moleChange(){	
+				prompt("changin moles");
+			};
+			
+			this.moleStart = function moleStart(){
+				$interval(moleChange(), 3000);
+			};
+			
+			this.currSquare = {
+				isMole: 1,
+				display: "You're on currSqu"
+			};
+			
+			this.hit = function hit(inSquare){
+				if(inSquare["isMole"]){
+					this.score++;
+				}
+			};
+			
+			this.update = function update(mouseOnSquare){
+				this.currSquare = mouseOnSquare;
+			};
+		
+		}]);
+		
+		
+	</script>
+</body>
+</html>

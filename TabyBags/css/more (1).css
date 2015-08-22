@@ -1,0 +1,28 @@
+.purple{
+	background-color: #3c0420;
+}
+.makeItFit{
+	height: 15%;
+	width: 15%;
+	float: left;
+	margin: 5%;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carouselStyle{
+	width: auto;
+	height: 317px;
+	max-height: 317px;
+}
+#logo{
+	width: auto;
+	height: 100%;
+}
+.topRow{
+	width: auto;
+	height: 200px;
+	max-height: 200px;
+}
